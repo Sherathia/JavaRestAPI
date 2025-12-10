@@ -1,0 +1,17 @@
+1. Once request comes to Dispatcher servlet  
+- Creates httpserveletrequest and resposne objects 
+- delegated request to handler mapping(Get mapping etc multiple mapping)
+- controller method is invoked
+
+HandlerMapping is a Spring MVC component that helps the DispatcherServlet decide which controller method should 
+handle an incoming request.
+
+Client sends: /products
+DispatcherServlet receives the request
+It asks HandlerMapping:
+“Which controller method should handle /products?”
+HandlerMapping checks your controllers, @RequestMapping, @GetMapping, etc.
+It returns the correct handler method to DispatcherServlet.
+
+A controller in Spring MVC (or any MVC framework) is responsible for handling incoming requests, 
+executing business logic (often through services), and returning the appropriate response or view.
